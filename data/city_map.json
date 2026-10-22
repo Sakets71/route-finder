@@ -1,0 +1,89 @@
+
+{
+  "locations": [
+    "College",
+    "Market",
+    "City Center",
+    "Hospital",
+    "Bus Stand",
+    "Railway Station",
+    "Airport",
+    "Park",
+    "Mall",
+    "Library"
+  ],
+  "roads": [
+    {
+        "from": "College", 
+        "to": "Market", 
+        "distance": 2
+    },
+    {
+        "from": "College", 
+        "to": "Bus Stand", 
+        "distance": 3
+    },
+    {
+        "from": "College", 
+        "to": "Library", 
+        "distance": 2.5
+    },
+    {
+        "from": "Market", 
+        "to": "City Center", 
+        "distance": 1.5
+    },
+    {
+        "from": "Market", 
+        "to": "Mall", 
+        "distance": 2
+    },
+    {
+        "from": "City Center", 
+        "to": "Hospital", 
+        "distance": 2
+    },
+    {
+        "from": "City Center", 
+        "to": "Park", 
+        "distance": 1
+    },
+    {
+        "from": "Hospital", 
+        "to": "Railway Station", 
+        "distance": 3
+    },
+    {
+        "from": "Hospital", 
+        "to": "Mall", 
+        "distance": 1.5
+    },
+    {
+        "from": "Bus Stand", 
+        "to": "Railway Station", 
+        "distance": 2
+    },
+    {
+        "from": "Bus Stand", 
+        "to": "Park", 
+        "distance": 2.5
+    },
+    {
+        "from": "Railway Station", 
+        "to": "Airport", 
+        "distance": 8
+    },
+    {
+        "from": "Airport", 
+        "to": "Mall", 
+        "distance": 5
+    },
+
+       
+    {
+        "from": "Library",
+        "to": "Mall",
+        "distance": 3
+    }
+  ]
+}

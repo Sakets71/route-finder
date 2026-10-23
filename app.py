@@ -24,20 +24,26 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    /* ---------- Hide Streamlit Defaults ---------- */
+    header {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+
     /* ---------- Base ---------- */
     html, body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                      Roboto, "Helvetica Neue", Arial, sans-serif;
     }
-    .stApp { background: #F6F6F1; color: #17211B; }
+    .stApp { background: #F8FAFC; color: #1E293B; }
     .block-container {
         max-width: 1160px;
-        padding: 2.25rem 2rem 3.5rem;
+        /* Reduced top padding so the title isn't cut off */
+        padding: 1.5rem 2rem 3.5rem; 
     }
 
     /* ---------- Typography ---------- */
     h1, h2, h3, h4 {
-        color: #17211B !important;
+        color: #1E293B !important;
         letter-spacing: -0.02em;
         font-weight: 650 !important;
     }
@@ -53,14 +59,14 @@ st.markdown(
         font-weight: 700;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: #2E6B4E;
-        background: #E8F0EA;
+        color: #2563EB;
+        background: #EFF6FF;
         padding: 0.35rem 0.75rem;
         border-radius: 999px;
         margin-bottom: 1rem;
     }
     .hero-subtitle {
-        color: #5A6B60;
+        color: #64748B;
         font-size: 1.02rem;
         max-width: 580px;
         line-height: 1.6;
@@ -70,9 +76,9 @@ st.markdown(
     /* ---------- Card containers ---------- */
     div[data-testid="stVerticalBlockBorderWrapper"] {
         background: #FFFFFF;
-        border: 1px solid #E4E8DF;
+        border: 1px solid #E2E8F0;
         border-radius: 14px;
-        box-shadow: 0 1px 2px rgba(20, 35, 27, 0.03);
+        box-shadow: 0 1px 2px rgba(30, 41, 59, 0.03);
     }
     /* Remove the inner form's own border so it doesn't double-up */
     div[data-testid="stForm"] {
@@ -83,23 +89,23 @@ st.markdown(
     /* ---------- Form inputs ---------- */
     div[data-baseweb="select"] > div {
         background: #FFFFFF !important;
-        border: 1px solid #DCE1D8 !important;
+        border: 1px solid #CBD5E1 !important;
         border-radius: 10px !important;
         min-height: 44px !important;
         transition: border-color 0.15s ease, box-shadow 0.15s ease;
     }
     div[data-baseweb="select"] > div:hover {
-        border-color: #B8C6BA !important;
+        border-color: #94A3B8 !important;
     }
     div[data-baseweb="select"] > div:focus-within {
-        border-color: #2E6B4E !important;
-        box-shadow: 0 0 0 3px rgba(46, 107, 78, 0.12) !important;
+        border-color: #2563EB !important;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
     }
     div[data-baseweb="select"] span,
-    div[data-baseweb="select"] input { color: #17211B !important; }
+    div[data-baseweb="select"] input { color: #1E293B !important; }
 
     [data-testid="stWidgetLabel"] p {
-        color: #4B5A50 !important;
+        color: #475569 !important;
         font-size: 0.85rem !important;
         font-weight: 600 !important;
         margin-bottom: 0.35rem !important;
@@ -108,20 +114,20 @@ st.markdown(
     /* ---------- Metrics ---------- */
     div[data-testid="stMetric"] {
         background: #FFFFFF;
-        border: 1px solid #E4E8DF;
+        border: 1px solid #E2E8F0;
         border-radius: 12px;
         padding: 1rem 1.15rem;
-        box-shadow: 0 1px 2px rgba(20, 35, 27, 0.03);
+        box-shadow: 0 1px 2px rgba(30, 41, 59, 0.03);
     }
     div[data-testid="stMetricLabel"] p {
-        color: #6B7A70 !important;
+        color: #64748B !important;
         font-size: 0.75rem !important;
         font-weight: 600 !important;
         letter-spacing: 0.05em;
         text-transform: uppercase;
     }
     div[data-testid="stMetricValue"] {
-        color: #17211B !important;
+        color: #1E293B !important;
         font-size: 1.65rem !important;
         font-weight: 700 !important;
         letter-spacing: -0.02em;
@@ -130,9 +136,9 @@ st.markdown(
     /* ---------- Buttons ---------- */
     div[data-testid="stFormSubmitButton"] button,
     div[data-testid="stButton"] button {
-        background: #2E6B4E;
+        background: #2563EB;
         color: #FFFFFF !important;
-        border: 1px solid #2E6B4E;
+        border: 1px solid #2563EB;
         border-radius: 10px;
         min-height: 46px;
         font-weight: 600;
@@ -141,15 +147,15 @@ st.markdown(
     }
     div[data-testid="stFormSubmitButton"] button:hover,
     div[data-testid="stButton"] button:hover {
-        background: #245640;
-        border-color: #245640;
+        background: #1D4ED8;
+        border-color: #1D4ED8;
         color: #FFFFFF !important;
     }
 
     /* ---------- Dividers ---------- */
     hr {
         border: none;
-        border-top: 1px solid #E4E8DF;
+        border-top: 1px solid #E2E8F0;
         margin: 2rem 0 !important;
     }
 
@@ -171,56 +177,56 @@ st.markdown(
         top: 22px;
         bottom: 0;
         width: 2px;
-        background: #D5DED6;
+        background: #CBD5E1;
         border-radius: 1px;
     }
     .timeline-dot {
         width: 14px;
         height: 14px;
         border-radius: 50%;
-        border: 3px solid #2E6B4E;
+        border: 3px solid #2563EB;
         background: #FFFFFF;
         box-sizing: border-box;
         margin: 4px auto 0;
         position: relative;
         z-index: 1;
     }
-    .timeline-item.destination .timeline-dot { background: #2E6B4E; }
+    .timeline-item.destination .timeline-dot { background: #2563EB; }
     .timeline-label {
         font-size: 0.7rem;
         font-weight: 700;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: #6B7A70;
+        color: #64748B;
         margin-bottom: 0.2rem;
     }
     .timeline-item.start .timeline-label,
-    .timeline-item.destination .timeline-label { color: #2E6B4E; }
+    .timeline-item.destination .timeline-label { color: #2563EB; }
     .timeline-title {
         font-size: 1.05rem;
         font-weight: 650;
-        color: #17211B;
+        color: #1E293B;
         letter-spacing: -0.01em;
         margin-bottom: 0.15rem;
     }
-    .timeline-meta { font-size: 0.85rem; color: #6B7A70; }
+    .timeline-meta { font-size: 0.85rem; color: #64748B; }
 
     /* ---------- Location chips ---------- */
     .location-chip {
         display: inline-block;
         background: #FFFFFF;
-        border: 1px solid #E4E8DF;
+        border: 1px solid #E2E8F0;
         border-radius: 999px;
         padding: 0.4rem 0.85rem;
         margin: 0.2rem 0.3rem 0.2rem 0;
         font-size: 0.87rem;
-        color: #17211B;
+        color: #1E293B;
         font-weight: 500;
     }
 
     /* ---------- Footer ---------- */
     .app-footer {
-        color: #7A887F;
+        color: #94A3B8;
         font-size: 0.82rem;
         text-align: center;
         padding: 1rem 0;
@@ -228,7 +234,7 @@ st.markdown(
 
     /* ---------- Responsive ---------- */
     @media (max-width: 780px) {
-        .block-container { padding: 1.25rem 1rem 2rem; }
+        .block-container { padding: 1rem 1rem 2rem; }
         h1 { font-size: 1.85rem !important; }
         div[data-testid="stMetricValue"] { font-size: 1.35rem !important; }
         div[data-testid="stHorizontalBlock"] { gap: 0.75rem !important; }
@@ -242,8 +248,8 @@ st.markdown(
 # =====================================================
 # Hero
 # =====================================================
-st.markdown('<div class="hero-kicker">City Routing Project</div>', unsafe_allow_html=True)
-st.title("Route Finder")
+st.markdown('<div class="hero-kicker">Feasible route finder</div>', unsafe_allow_html=True)
+st.title("PathNova")
 st.markdown(
     """
     <p class="hero-subtitle">
@@ -451,14 +457,17 @@ if result and details:
             show=False,
         )
         if fig is not None:
+            # UPDATED CONFIG: Forces zoom buttons to stay visible on mobile
             st.plotly_chart(
-            fig,
-            use_container_width=True,
-             config={
-                   "scrollZoom": True,
-                 "displaylogo": False
+                fig,
+                use_container_width=True,
+                config={
+                    "scrollZoom": True,
+                    "displaylogo": False,
+                    "displayModeBar": True, 
+                    "modeBarButtonsToRemove": ["lasso2d", "select2d"]
                 }
-        )
+            )
             
         else:
             st.info(

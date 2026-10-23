@@ -232,7 +232,8 @@ def draw_city_graph(
         paper_bgcolor=_BG,
         plot_bgcolor=_PLOT_BG,
         font=dict(family=_FONT, color=_TEXT),
-        margin=dict(l=40, r=40, t=80, b=70),
+        # FIX: Increased bottom margin to b=120 so text doesn't cut off
+        margin=dict(l=40, r=40, t=80, b=120),
         hoverlabel=dict(
             bgcolor="white",
             bordercolor="#E2E8F0",
@@ -240,13 +241,15 @@ def draw_city_graph(
         ),
         legend=dict(
             orientation="h",
-            yanchor="bottom", y=-0.14,
+            yanchor="bottom", y=-0.15,
             xanchor="center", x=0.5,
             bgcolor="rgba(255,255,255,0)",
             font=dict(size=11, color=_MUTED),
         ),
         dragmode="pan",
         hovermode="closest",
+        # FIX: Added height to make mobile rendering larger
+        height=600,
         annotations=[
             dict(
                 text=(
@@ -254,7 +257,7 @@ def draw_city_graph(
                     "coordinates, not GPS coordinates."
                 ),
                 xref="paper", yref="paper",
-                x=0.5, y=-0.20,
+                x=0.5, y=-0.22,
                 xanchor="center", yanchor="top",
                 showarrow=False,
                 font=dict(family=_FONT, size=10, color=_MUTED),

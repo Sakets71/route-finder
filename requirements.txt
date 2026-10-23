@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 streamlit
 matplotlib
 networkx
 plotly
 
-=======
-streamlit
-matplotlib
-networkx
-plotly
-
->>>>>>> 35ce0b4f461b2120c2105873eba3de91b6f61188

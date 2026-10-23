@@ -441,10 +441,6 @@ if result and details:
     # Graph
     st.write("")
     st.subheader("City network diagram")
-    st.caption(
-        "This diagram shows connections between locations. "
-        "It is not a geographic street map yet."
-    )
 
     try:
         fig = draw_city_graph(

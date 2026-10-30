@@ -214,7 +214,7 @@ st.markdown(
     /* ---------- Location chips ---------- */
     .location-chip {
         display: inline-block;
-        background: #FFFFFF;
+        background: #000000;
         border: 1px solid #E2E8F0;
         border-radius: 999px;
         padding: 0.4rem 0.85rem;

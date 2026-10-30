@@ -212,6 +212,7 @@ st.markdown(
     .timeline-meta { font-size: 0.85rem; color: #64748B; }
 
     /* ---------- Location chips ---------- */
+/* ---------- Location chips ---------- */
     .location-chip {
         display: inline-block;
         background: #000000;
@@ -220,8 +221,8 @@ st.markdown(
         padding: 0.4rem 0.85rem;
         margin: 0.2rem 0.3rem 0.2rem 0;
         font-size: 0.87rem;
-        color: #1E293B;
-        font-weight: 500;
+        color: #FFFFFF;
+        font-weight: 600;
     }
 
     /* ---------- Footer ---------- */

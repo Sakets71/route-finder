@@ -119,13 +119,14 @@ st.markdown(
         padding: 1rem 1.15rem;
         box-shadow: 0 1px 2px rgba(30, 41, 59, 0.03);
     }
-    div[data-testid="stMetricLabel"] p {
-        color: #64748B !important;
-        font-size: 0.75rem !important;
-        font-weight: 600 !important;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-    }
+    div[data-testid="stMetricLabel"],
+div[data-testid="stMetricLabel"] p {
+    color: #475569 !important;
+    opacity: 1 !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.03em;
+}
     div[data-testid="stMetricValue"] {
         color: #1E293B !important;
         font-size: 1.65rem !important;

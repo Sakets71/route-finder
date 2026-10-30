@@ -119,14 +119,13 @@ st.markdown(
         padding: 1rem 1.15rem;
         box-shadow: 0 1px 2px rgba(30, 41, 59, 0.03);
     }
-    div[data-testid="stMetricLabel"],
-div[data-testid="stMetricLabel"] p {
-    color: #475569 !important;
-    opacity: 1 !important;
-    font-size: 0.85rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.03em;
-}
+    div[data-testid="stMetricLabel"] p {
+        color: #64748B !important;
+        font-size: 0.75rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
     div[data-testid="stMetricValue"] {
         color: #1E293B !important;
         font-size: 1.65rem !important;
@@ -214,17 +213,17 @@ div[data-testid="stMetricLabel"] p {
 
     /* ---------- Location chips ---------- */
 /* ---------- Location chips ---------- */
-    .location-chip {
-        display: inline-block;
-        background: #000000;
-        border: 1px solid #E2E8F0;
-        border-radius: 999px;
-        padding: 0.4rem 0.85rem;
-        margin: 0.2rem 0.3rem 0.2rem 0;
-        font-size: 0.87rem;
-        color: #FFFFFF;
-        font-weight: 600;
-    }
+.location-chip {
+    display: inline-block;
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+    margin: 0.2rem 0.3rem 0.2rem 0;
+    font-size: 0.87rem;
+    color: #1E293B;
+    font-weight: 600;
+}
 
     /* ---------- Footer ---------- */
     .app-footer {
